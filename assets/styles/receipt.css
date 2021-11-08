@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	scroll-behavior: smooth;
+	line-height: 1.5;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	word-break: break-word;
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: inherit;
+	font-weight: bold;
+}
+
+button {
+	border: 1px solid;
+	background-color: transparent;
+}
+
+body {
+	font-family: "DM Sans", sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+td,
+th {
+	box-sizing: border-box;
+}
+u ~ div .wrapper {
+	min-width: 100vw;
+}
+.sm-inline-block {
+	display: inline-block !important;
+}
+.sm-hidden {
+	display: none !important;
+}
+.sm-leading-32 {
+	line-height: 32px !important;
+}
+.sm-p-20 {
+	padding: 20px !important;
+}
+.sm-py-12 {
+	padding-top: 12px !important;
+	padding-bottom: 12px !important;
+}
+.sm-text-center {
+	text-align: center !important;
+}
+.sm-text-xs {
+	font-size: 12px !important;
+}
+.sm-text-lg {
+	font-size: 18px !important;
+}
+.sm-w-1-4 {
+	width: 25% !important;
+}
+.sm-w-3-4 {
+	width: 75% !important;
+}
+.sm-w-full {
+	width: 100% !important;
+}
+.wrapper {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.d-none {
+	display: none;
+}
+
+.d-block {
+	display: block !important;
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Page title -->
+		<title>Online Store</title>
+		<!-- Adding stylesheet -->
+		<link rel="stylesheet" href="/styles/styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<!-- Page header -->
+			<h1 class="logo">Illustrations Online Shop</h1>
+		</header>
+		<!-- Main block which contains the store -->
+		<main>
+			<div class="responsive-container">
+				<form id="store" class="store-form">
+					<div class="grid">
+						<div class="grid-column">
+							<div class="product">
+								<div class="product-image">
+									<!-- Product Images -->
+									<img src="/images/space.jpg" alt="cosmonaut" />
+								</div>
+								<div class="product-content">
+									<div class="product-info">
+										<!-- Cosmonaut -->
+										<h2 class="product-title">Cosmonaut</h2>
+										<p class="product-price">$ 5</p>
+									</div>
+									<label class="qty" for="cosmonaut">
+										<!-- Getting the input quantity for cosmonaut -->
+										<span class="product-title">Quantity</span>
+										<input
+											type="number"
+											class="count"
+											name="cosmonaut"
+											id="cosmonaut"
+										/>
+									</label>
+								</div>
+							</div>
+
+							<div class="product">
+								<div class="product-image">
+									<!-- Milkshake image -->
+									<img src="/images/milkshake.jpg" alt="milkshake" />
+								</div>
+								<div class="product-content">
+									<div class="product-info">
+										<h2 class="product-title">Milkshake</h2>
+										<p class="product-price">$ 9</p>
+									</div>
+									<label class="qty" for="milkshake">
+										<span class="product-title">Quantity</span>
+										<!-- Input for milkshake qty -->
+										<input
+											type="number"
+											class="count"
+											name="milkshake"
+											id="milkshake"
+										/>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="grid-column">
+							<div class="field">
+								<!-- Name input -->
+								<label class="field__label" for="name">Name *</label>
+								<input class="field__input" type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label class="field__label" for="address">Address *</label>
+								<input
+									class="field__input"
+									type="text"
+									name="address"
+									id="address"
+								/>
+							</div>
+							<div class="field">
+								<label class="field__label" for="city">City *</label>
+								<input class="field__input" type="text" name="city" id="city" />
+							</div>
+							<div class="field">
+								<label class="field__label" for="province">Province *</label>
+								<input
+									class="field__input"
+									type="text"
+									name="province"
+									id="province"
+								/>
+							</div>
+							<div class="field">
+								<label class="field__label" for="phone">Phone *</label>
+								<input class="field__input" type="text" name="phone" id="phone" />
+							</div>
+							<div class="field">
+								<label class="field__label" for="email">Email *</label>
+								<input class="field__input" type="text" name="email" id="email" />
+							</div>
+							<div class="field" style="text-align: center">
+								<button type="submit" class="button-submit">
+									<span>Submit</span>
+								</button>
+							</div>
+						</div>
+						<!-- Error block -->
+						<div class="grid-column d-none" id="receipt_error">
+							<h2>Errors</h2>
+							<p id="error"></p>
+						</div>
+						<!-- Receipt block -->
+						<div class="grid-column d-none" id="receipt">
+							<table
+								class="wrapper"
+								width="100%"
+								height="100%"
+								cellpadding="0"
+								cellspacing="0"
+								role="presentation"
+							>
+								<tr>
+									<td align="center" style="padding: 24px" width="100%">
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="0"
+											role="presentation"
+										>
+											<tr>
+												<td width="80%">
+													<h1
+														class="sm-text-lg all-font-roboto"
+														style="
+															font-weight: 700;
+															line-height: 100%;
+															margin: 0;
+															margin-bottom: 4px;
+															font-size: 24px;
+														"
+													>
+														Receipt
+													</h1>
+												</td>
+												<td
+													style="text-align: right"
+													width="20%"
+													align="right"
+												></td>
+											</tr>
+										</table>
+										<div style="line-height: 32px">&zwnj;</div>
+										<table
+											class="sm-leading-32"
+											style="line-height: 28px; font-size: 14px"
+											width="100%"
+											cellpadding="0"
+											cellspacing="0"
+											role="presentation"
+										>
+											<tr>
+												<td
+													class="sm-inline-block"
+													style="color: #718096"
+													width="50%"
+												>
+													Name
+												</td>
+												<td
+													class="sm-inline-block"
+													style="font-weight: 600; text-align: right"
+													width="50%"
+													align="right"
+													id="receipt_name"
+												></td>
+											</tr>
+											<tr>
+												<td
+													class="sm-inline-block"
+													style="color: #718096"
+													width="50%"
+												>
+													Address
+												</td>
+												<td
+													class="sm-inline-block"
+													style="font-weight: 600; text-align: right"
+													width="50%"
+													align="right"
+													id="receipt_address"
+												></td>
+											</tr>
+											<tr>
+												<td
+													class="sm-w-1-4 sm-inline-block"
+													style="color: #718096"
+													width="50%"
+												>
+													City
+												</td>
+												<td
+													class="sm-w-3-4 sm-inline-block"
+													style="font-weight: 600; text-align: right"
+													width="50%"
+													align="right"
+													id="receipt_city"
+												></td>
+											</tr>
+											<tr>
+												<td
+													class="sm-w-1-4 sm-inline-block"
+													style="color: #718096"
+													width="50%"
+												>
+													Province
+												</td>
+												<td
+													class="sm-w-3-4 sm-inline-block"
+													style="font-weight: 600; text-align: right"
+													width="50%"
+													align="right"
+													id="receipt_province"
+												></td>
+											</tr>
+											<tr>
+												<td
+													class="sm-w-1-4 sm-inline-block"
+													style="color: #718096"
+													width="50%"
+												>
+													Phone
+												</td>
+												<td
+													class="sm-w-3-4 sm-inline-block"
+													style="font-weight: 600; text-align: right"
+													width="50%"
+													align="right"
+													id="receipt_phone"
+												></td>
+											</tr>
+											<tr>
+												<td
+													class="sm-w-1-4 sm-inline-block"
+													style="color: #718096"
+													width="50%"
+												>
+													Email
+												</td>
+												<td
+													class="sm-w-3-4 sm-inline-block"
+													style="font-weight: 600; text-align: right"
+													width="50%"
+													align="right"
+													id="receipt_email"
+												></td>
+											</tr>
+										</table>
+										<table
+											width="100%"
+											cellpadding="0"
+											cellspacing="0"
+											role="presentation"
+										>
+											<tr>
+												<td style="padding-top: 24px; padding-bottom: 24px">
+													<div
+														style="
+															background-color: #edf2f7;
+															height: 2px;
+															line-height: 2px;
+														"
+													>
+														&zwnj;
+													</div>
+												</td>
+											</tr>
+										</table>
+										<table
+											style="line-height: 28px; font-size: 14px"
+											width="100%"
+											cellpadding="0"
+											cellspacing="0"
+											role="presentation"
+										>
+											<tr class="d-none" id="cosmonaut_tr">
+												<td style="color: #718096" width="50%">
+													Cosmonaut
+												</td>
+												<td
+													style="font-weight: 600"
+													width="25%"
+													id="cosmonaut_qty"
+												></td>
+												<td
+													style="font-weight: 600; text-align: right"
+													width="25%"
+													align="right"
+													id="cosmonaut_price"
+												></td>
+											</tr>
+											<tr class="d-none" id="milkshake_tr">
+												<td style="color: #718096" width="50%">
+													Milkshake
+												</td>
+												<td
+													style="font-weight: 600"
+													width="25%"
+													id="milkshake_qty"
+												></td>
+												<td
+													style="font-weight: 600; text-align: right"
+													width="25%"
+													align="right"
+													id="milkshake_price"
+												></td>
+											</tr>
+											<tr>
+												<td style="color: #718096" width="50%">Tax</td>
+												<td style="font-weight: 600" width="0%"></td>
+												<td
+													style="font-weight: 600; text-align: right"
+													width="50%"
+													align="right"
+													id="receipt_tax"
+												></td>
+											</tr>
+											<tr>
+												<td
+													style="
+														font-weight: 600;
+														padding-top: 32px;
+														color: #000000;
+														font-size: 20px;
+													"
+													width="50%"
+												>
+													Total
+												</td>
+												<td style="font-weight: 600" width="0%"></td>
+												<td
+													style="
+														font-weight: 600;
+														padding-top: 32px;
+														text-align: right;
+														color: #68d391;
+														font-size: 20px;
+													"
+													width="50%"
+													align="right"
+													id="receipt_total"
+												></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+		<script src="/js/jquery-3.6.0.min.js"></script>
+		<script src="/js/script.js"></script>
+	</body>
+</html>
